@@ -46,7 +46,7 @@ The Mongo ODM for Go
 ## Installation
 
 ```bash
-go get github.com/kamva/mgm/v3
+go get github.com/YspCoder/mgm
 ```
 
 
@@ -54,7 +54,7 @@ go get github.com/kamva/mgm/v3
 To get started, import the `mgm` package and setup the default config:
 ```go
 import (
-   "github.com/kamva/mgm/v3"
+   "github.com/YspCoder/mgm"
    "go.mongodb.org/mongo-driver/mongo/options"
 )
 
@@ -299,9 +299,9 @@ _ := mgm.Coll(&Book{}).SimpleAggregate(&result,
 Do aggregations using the mongo Aggregation method:
 ```go
 import (
-   "github.com/kamva/mgm/v3"
-   "github.com/kamva/mgm/v3/builder"
-   "github.com/kamva/mgm/v3/field"
+   "github.com/YspCoder/mgm"
+   "github.com/YspCoder/mgm/builder"
+   "github.com/YspCoder/mgm/field"
    . "go.mongodb.org/mongo-driver/bson"
    "go.mongodb.org/mongo-driver/bson/primitive"
 )
@@ -318,10 +318,10 @@ cur, err := mgm.Coll(&Book{}).Aggregate(mgm.Ctx(), A{
 A more complex example and mixes with mongo raw pipelines:
 ```go
 import (
-   "github.com/kamva/mgm/v3"
-   "github.com/kamva/mgm/v3/builder"
-   "github.com/kamva/mgm/v3/field"
-   "github.com/kamva/mgm/v3/operator"
+   "github.com/YspCoder/mgm"
+   "github.com/YspCoder/mgm/builder"
+   "github.com/YspCoder/mgm/field"
+   "github.com/YspCoder/mgm/operator"
    . "go.mongodb.org/mongo-driver/bson"
    "go.mongodb.org/mongo-driver/bson/primitive"
 )
@@ -379,9 +379,9 @@ err := mgm.Transaction(func(session mongo.Session, sc mongo.SessionContext) erro
 Example:
  ```go
 import (
-   "github.com/kamva/mgm/v3"
-   f "github.com/kamva/mgm/v3/field"
-   o "github.com/kamva/mgm/v3/operator"
+   "github.com/YspCoder/mgm"
+   f "github.com/YspCoder/mgm/field"
+   o "github.com/YspCoder/mgm/operator"
    "go.mongodb.org/mongo-driver/bson"
 )
 

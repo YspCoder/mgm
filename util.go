@@ -1,7 +1,7 @@
 package mgm
 
 import (
-	"github.com/kamva/mgm/v3/internal/util"
+	"github.com/YspCoder/mgm/internal/util"
 	"github.com/jinzhu/inflection"
 	"go.mongodb.org/mongo-driver/mongo/options"
 	"reflect"
@@ -17,8 +17,8 @@ func Coll(m Model, opts ...*options.CollectionOptions) *Collection {
 	return CollectionByName(CollName(m), opts...)
 }
 
-// CollName returns a model's collection name. The `CollectionNameGetter` will be used 
-// if the model implements this interface. Otherwise, the collection name is inferred 
+// CollName returns a model's collection name. The `CollectionNameGetter` will be used
+// if the model implements this interface. Otherwise, the collection name is inferred
 // based on the model's type using reflection.
 func CollName(m Model) string {
 

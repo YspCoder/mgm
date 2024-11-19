@@ -1,8 +1,8 @@
 package mgm_test
 
 import (
-	"github.com/kamva/mgm/v3"
-	"github.com/kamva/mgm/v3/internal/util"
+	"github.com/YspCoder/mgm"
+	"github.com/YspCoder/mgm/internal/util"
 	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/mongo/options"
 	"testing"
@@ -10,7 +10,7 @@ import (
 
 func setupDefConnection() {
 	util.PanicErr(
-		mgm.SetDefaultConfig(nil, "models", options.Client().ApplyURI("mongodb://root:12345@localhost:27017")),
+		mgm.SetDefaultConfig(nil, "models", options.Client().ApplyURI("mongodb://localhost:27017")),
 	)
 }
 

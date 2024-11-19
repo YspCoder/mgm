@@ -1,7 +1,7 @@
 package crud
 
 import (
-	"github.com/kamva/mgm/v3"
+	"github.com/YspCoder/mgm"
 	"go.mongodb.org/mongo-driver/mongo/options"
 )
 

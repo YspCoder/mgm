@@ -3,10 +3,10 @@ package mgm_test
 import (
 	"testing"
 
-	"github.com/kamva/mgm/v3"
-	"github.com/kamva/mgm/v3/builder"
-	"github.com/kamva/mgm/v3/internal/util"
-	"github.com/kamva/mgm/v3/operator"
+	"github.com/YspCoder/mgm"
+	"github.com/YspCoder/mgm/builder"
+	"github.com/YspCoder/mgm/internal/util"
+	"github.com/YspCoder/mgm/operator"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	"go.mongodb.org/mongo-driver/bson"
