@@ -2,7 +2,6 @@ package mgm
 
 import (
 	"github.com/YspCoder/mgm/internal/util"
-	"github.com/jinzhu/inflection"
 	"go.mongodb.org/mongo-driver/mongo/options"
 	"reflect"
 )
@@ -28,7 +27,7 @@ func CollName(m Model) string {
 
 	name := reflect.TypeOf(m).Elem().Name()
 
-	return inflection.Plural(util.ToSnakeCase(name))
+	return util.ToSnakeCase(name)
 }
 
 // UpsertTrueOption returns new instance of UpdateOptions with the upsert property set to true.
